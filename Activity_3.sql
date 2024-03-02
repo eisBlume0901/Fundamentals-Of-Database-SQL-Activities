@@ -78,7 +78,7 @@ INSERT INTO suppliers (supplier_code, supplier_name, address)
 VALUES ('S006', 'The_Coffee_Collective', '838, place Véronique Moulin')
 
 -- RIGHT JOIN
-SELECT c.id, c.supplier_code, s.supplier_name, s.address, s.phone FROM coffees c
+SELECT c.id, s.supplier_code, s.supplier_name, s.address, s.phone FROM coffees c
 RIGHT JOIN suppliers s ON c.supplier_code = s.supplier_code
 GROUP BY s.supplier_code;
 
